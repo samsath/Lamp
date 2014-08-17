@@ -1,0 +1,37 @@
+
+body {
+}
+div#Welcome {
+}
+label {
+}
+div#NForm {
+}
+input#Nname[type="text"] {
+}
+input#myIP[type="text"] {
+}
+input#Nfriend[type="text"] {
+}
+div#AForm {
+    background: #555555;
+    border-radius: 10px;
+    width: 50%;
+}
+h1#AHead {
+    position: relative;
+}
+input#Aopen[type="button"] {
+    position: relative;
+    top: -55px;
+    left: 90%;
+    background: #555;
+    color: #fff;
+    border: 0px;
+}
+input#AServer[type="text"] {
+}
+input#ASerUname[type="text"] {
+}
+input#ASerPssw[type="text"] {
+}

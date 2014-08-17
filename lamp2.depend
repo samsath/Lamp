@@ -1,0 +1,115 @@
+# depslib dependency file v1.0
+1398524014 source:/home/sam/Dropbox/Programming/G54UBI/workspace/lamp2/main.cpp
+	<iostream>
+	<string>
+	"Lamp.h"
+	"Source.h"
+	"View.h"
+
+1398526807 /home/sam/Dropbox/Programming/G54UBI/workspace/lamp2/include/Lamp.h
+	<string>
+	<vector>
+	"View.h"
+	"Source.h"
+
+1399554616 /home/sam/Dropbox/Programming/G54UBI/workspace/lamp2/include/View.h
+
+1399554293 /home/sam/Dropbox/Programming/G54UBI/workspace/lamp2/include/Source.h
+	<string>
+	<vector>
+	"Lamp.h"
+	<crafter.h>
+	"mysql_connection.h"
+	<cppconn/driver.h>
+	<cppconn/exception.h>
+	<cppconn/resultset.h>
+	<cppconn/statement.h>
+
+1398525515 source:/home/sam/Dropbox/Programming/G54UBI/workspace/lamp2/src/Lamp.cpp
+	<string>
+	<vector>
+	<stdlib.h>
+	"Lamp.h"
+	"Source.h"
+	"View.h"
+
+1399554505 source:/home/sam/Dropbox/Programming/G54UBI/workspace/lamp2/src/Source.cpp
+	"Source.h"
+	<string>
+	<vector>
+	<iostream>
+	<sstream>
+	<fstream>
+	<crafter.h>
+	"mysql_connection.h"
+	<cppconn/driver.h>
+	<cppconn/exception.h>
+	<cppconn/resultset.h>
+	<cppconn/statement.h>
+
+1398516770 source:/home/sam/Dropbox/Programming/G54UBI/workspace/lamp2/src/View.cpp
+	"View.h"
+	"wiringPi.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<softPwm.h>
+	<iostream>
+
+1399574588 source:/home/pi/lamp2/src/Lamp.cpp
+	<string>
+	<vector>
+	<stdlib.h>
+	"Lamp.h"
+	"Source.h"
+	"View.h"
+
+1399574588 /home/pi/lamp2/include/Lamp.h
+	<string>
+	<vector>
+	"View.h"
+	"Source.h"
+
+1399574588 /home/pi/lamp2/include/View.h
+
+1399574588 /home/pi/lamp2/include/Source.h
+	<string>
+	<vector>
+	"Lamp.h"
+	<crafter.h>
+	"mysql_connection.h"
+	<cppconn/driver.h>
+	<cppconn/exception.h>
+	<cppconn/resultset.h>
+	<cppconn/statement.h>
+
+1399574588 source:/home/pi/lamp2/src/Source.cpp
+	"Source.h"
+	<string>
+	<vector>
+	<iostream>
+	<sstream>
+	<fstream>
+	<crafter.h>
+	"mysql_connection.h"
+	<cppconn/driver.h>
+	<cppconn/exception.h>
+	<cppconn/resultset.h>
+	<cppconn/statement.h>
+
+1399574589 source:/home/pi/lamp2/src/View.cpp
+	"View.h"
+	"wiringPi.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<softPwm.h>
+	<iostream>
+
+1399561354 source:/home/pi/lamp2/main.cpp
+	<iostream>
+	<string>
+	"Lamp.h"
+	"Source.h"
+	"View.h"
+

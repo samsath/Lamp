@@ -1,0 +1,51 @@
+wifi
+	Return true or falus if the person is near
+	input
+		(For the ping)
+		your ip
+		your MAC
+	output
+		bool on if that person is there.
+		--- Posible the IP and MAc again into the Lamp
+
+
+File
+	Looks at the file and returns the content
+	input
+		FileLoc ( at class creation)
+		
+				/*	YourName
+				*   DeviceIP
+				*   PersonName
+				*   ServerURL
+				*   ServerUsername
+				*   ServerPassword
+				*   YourMacAddress
+				*/
+	output
+		vector of the file content
+		
+Server
+	Looks at the databse and get and send the statues
+	
+	input
+		Server
+			> Server URL
+			> Server Username
+			> Server Password
+		connect
+			> Your name
+			> Your Statues
+			> Person Name
+			
+	output
+		PersonStatues as int 0,1,2
+		
+
+Server details
+URL=db525534725.db.1and1.com
+Port=3306
+Uname=dbo525534725
+Pwd=lcar1990
+
+

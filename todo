@@ -1,0 +1,8 @@
+This project will need to be compiled with the
+
+g++ main.cpp -o exe -lcrafter -lpthread -lwiringPi
+
+statues
+0 = unkown
+1 = work
+2 = home

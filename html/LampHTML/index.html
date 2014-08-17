@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>[Keep the Lights ON!]        Setup</title>
+        <meta name="description" content="">
+        <meta name="author" content="sam">
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css">
+        <script src="JQuery.js"></script>
+        
+    </head>
+
+    <body>
+		<script>
+		$(document).ready(function(){
+			$.getJSON('open.php', function(data) {
+				document.getElementById("Nname").value = "" +data.Name;
+				document.getElementById("myIP").value = "" +data.IP;
+				document.getElementById("Nfriend").value = "" +data.Other;
+				document.getElementById("AServer").value = "" +data.db;
+				document.getElementById("ASerUname").value = "" +data.uname;
+				document.getElementById("ASerPssw").value = "" +data.pwd;
+				document.getElementById("MAChard").value = "" +data.MAC;
+				if (document.getElementById("MAChard").value == "false"){
+					document.getElementById("MAChard").value = ""};
+			});
+		});
+		</script>
+        <div>
+            <div id="Welcome">Keep the Light on Setup Page</div>
+            <div id="NForm">
+	            <form id="NormalForm" method="post" enctype="multipart/form-data" name="Normal">
+	            <p>
+	                <label for="Nname"> Your Name: </label>
+	                <input id="Nname" type="text" name="name" placeholder="Bill">
+	            </p><p>
+	                <label for="myIP">Your Device IP: </label>
+	                <input id="myIP" type="text" name="myIP">
+	                <input id="Refresh" type="button" name="refresh" value="Refresh IP">
+	                <script>
+	                	$('#Refresh').click(function(){
+	                		console.log( 'Refresh Clicked' );
+	                		$.getJSON('getIP.php', function(data){
+	                			document.getElementById("myIP").value = "" + data.ip;
+	                			console.log( "ip = " + data.ip );
+            				});
+	                	});
+	                </script>
+	            </p><p>
+	            	<label for="Nfriend">Person you want to light up? :</label>
+	            	<input id="Nfriend" type="text" name="name" placeholder="Ben">
+	            </p>
+	            </form>
+            </div>
+            <div id="AForm">
+            	<h1 id="AHead">Advance</h1>
+            	<input id="Aopen" type="button" name="AOpen" value="\/" onclick="AdvanceOpen(this.form)">
+            	<form id="AdvForm" method="post" enctype="multipart/form-data" name="Advance">
+            		<p>
+		                <label for="AServer"> Server URL: </label>
+		                <input id="AServer" type="text" name="ServerURL" placeholder="http://.........">
+	            	</p><p>
+		                <label for="ASerUname"> Username: </label>
+		                <input id="ASerUname" type="text" name="ServerUname" placeholder="UserName">
+	            	</p><p>
+		                <label for="ASerPssw"> Password: </label>
+		                <input id="ASerPssw" type="text" name="ServerPwd" placeholder="UPassword">
+	            	</p><p>
+		                <label for="MAChard"> Your Mac Address: </label>
+		                <input id="MAChard" type="text" name="MACAdd" placeholder="ff:ff:ff:ff:ff:ff">
+	            	</p>
+            		
+            	</form>
+            </div>
+           	<input id="submit" type="button" name="submit" value="Save">  
+       		<script>
+       			$('#submit').click(function(){
+              		console.log( 'ASubmit Clicked' );
+	            	// This sends the text area values to the php file
+	            	var MyName = document.getElementById("Nname");
+	            	var Device = document.getElementById("myIP");
+	            	var YourName = document.getElementById("Nfriend");
+	            	var Server = document.getElementById("AServer");
+	            	var Uname = document.getElementById("ASerUname");
+	            	var Pwd = document.getElementById("ASerPssw");
+	            	var MyMac = document.getElementById("MAChard");
+	            	console.log( MyName.value);
+	            	var posting = $.post("file.php",{type: "S",name: MyName.value , dev: Device.value, YN: YourName.value, Se: Server.value, Un: Uname.value, Pwd: Pwd.value, Mac:MyMac.value});
+	            	
+	            
+            	});
+       		</script>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="lamp2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/lamp2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="../../../../../raspberrypi/rootfs/" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../lamp2" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-lcrafter -lpthread -lwiringPi -lmysqlcppconn" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/lamp2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lcrafter -lpthread -lwiringPi -lmysqlcppconn" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Lamp.h" />
+		<Unit filename="include/Source.h" />
+		<Unit filename="include/View.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Lamp.cpp" />
+		<Unit filename="src/Source.cpp" />
+		<Unit filename="src/View.cpp" />
+		<Unit filename="todo" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
